@@ -1,23 +1,27 @@
-<h1>My bookshelf</h1>
- 
-<%= link_to 'Put up a new book', new_book_path %>
+<div class="jumbotron">
+  <div class="container">
+    <h1>Welcom to my bookshelf!</h1>
+    <p>Set up a bookshelf. Put up your book. Let's build up a library together!</p>
+    <p><%= link_to 'Put up a new book', new_book_path, class: "btn btn-lg btn-primary" %></p>
+  </div>
+</div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th colspan="2"></th>
-  </tr>
- 
+
+<div class="row">
   <% @books.each do |book| %>
-    <tr>
-      <td><%= book.name %></td>
-      <td><%= book.description %></td>
-      <td><%= link_to 'Show', book_path(book) %></td>
-      <td><%= link_to 'Edit', edit_book_path(book) %></td>
-      <td><%= link_to 'Destroy', book_path(book),
+    <div class="col-lg-4">
+      <%= image_tag "book.jpg", class: "img-circle",  width: "140", height: "140" %>
+      <h2><%= book.name %></h2>
+      <p><%= book.description %></p>
+      <p>
+        <%= link_to 'View', book_path(book), class: "btn btn-default" %>
+        <%= link_to 'Edit', edit_book_path(book), class: "btn btn-default" %>
+        <%= link_to 'Destroy', book_path(book), 
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+              data: { confirm: 'Are you sure?' },
+              class: "btn btn-default" %>
+      </p>
+    </div>
   <% end %>
-</table>
+
+</div><!-- row -->
