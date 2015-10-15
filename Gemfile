@@ -6,6 +6,11 @@ source 'http://ruby.taobao.org'
 gem 'rails', '4.2.1'
 # secure password
 gem 'bcrypt', '3.1.7'
+# generate test data by seed.rb
+gem 'faker', '1.4.2'
+# paging
+gem 'will_paginate', '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
 # Use Bootstrap for responsive design
 gem 'bootstrap-sass', '3.3.4.1'
 # Use SCSS for stylesheets
