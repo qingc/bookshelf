@@ -1,11 +1,11 @@
-#source 'https://rubygems.org'
-source 'http://ruby.taobao.org'
+source 'https://rubygems.org'
+#source 'http://ruby.taobao.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # secure password
-gem 'bcrypt', '3.1.7'
+gem 'bcrypt', '~>3.1.9'
 # generate test data by seed.rb
 gem 'faker', '1.4.2'
 # paging

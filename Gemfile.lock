@@ -1,5 +1,5 @@
 GEM
-  remote: http://ruby.taobao.org/
+  remote: https://rubygems.org/
   specs:
     actionmailer (4.2.1)
       actionpack (= 4.2.1)
@@ -41,8 +41,8 @@ GEM
     autoprefixer-rails (5.2.0)
       execjs
       json
-    bcrypt (3.1.7)
-    bcrypt (3.1.7-x64-mingw32)
+    bcrypt (3.1.10)
+    bcrypt (3.1.10-x64-mingw32)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.4.1)
@@ -223,7 +223,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  bcrypt (= 3.1.7)
+  bcrypt (~> 3.1.9)
   bootstrap-sass (= 3.3.4.1)
   bootstrap-will_paginate (= 0.0.10)
   byebug
@@ -245,6 +245,3 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
   will_paginate (= 3.0.7)
-
-BUNDLED WITH
-   1.10.6

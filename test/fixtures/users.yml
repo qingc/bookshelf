@@ -7,3 +7,11 @@ one:
 two:
   name: MyString
   email: MyString
+
+tina:
+  name: tina
+  email: tina@bookshelf.com
+  password_digest: <%= User.digest('password') %>
+  admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
