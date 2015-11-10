@@ -12,7 +12,7 @@ class MicropostsController < ApplicationController
 	    if @micropost.save
 	      flash[:success] = "Micropost created!"
 	      #redirect_to root_url
-	      redirect_to request.referrer || root_url
+	      redirect_to 	 || root_url
 	    else
 	      #render 'static_pages/home'
 	      redirect_to request.referrer || root_url
@@ -28,7 +28,7 @@ class MicropostsController < ApplicationController
   private
 
     def micropost_params
-      params.require(:micropost).permit(:content)
+      params.require(:micropost).permit(:content, :picture)
     end
 
     def correct_user
