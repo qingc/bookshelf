@@ -15,6 +15,7 @@ class MicropostsController < ApplicationController
 	      redirect_to 	 || root_url
 	    else
 	      #render 'static_pages/home'
+	      flash[:danger] = "Micropost create failed!"
 	      redirect_to request.referrer || root_url
 	    end
 	end
