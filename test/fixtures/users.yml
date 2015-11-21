@@ -23,3 +23,19 @@ mike:
   admin: true
   activated: true
   activated_at: <%= Time.zone.now %>
+
+jim:
+  name: jim
+  email: jim@bookshelf.com
+  password_digest: <%= User.digest('password') %>
+  admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+lana:
+  name: lana
+  email: lana@bookshelf.com
+  password_digest: <%= User.digest('password') %>
+  admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>

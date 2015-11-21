@@ -30,4 +30,22 @@ class UserTest < ActiveSupport::TestCase
     assert_not tina.following?(mike)
   end
 
+  test "feed should have the right posts" do
+    tina = users(:tina)
+    jim  = users(:jim)
+    lana = users(:lana)
+    # Posts from followed user
+    lana.microposts.each do |post_following|
+      assert mike.feed.include?(post_following)
+    end
+    # Posts from self
+    lana.microposts.each do |post_self|
+      assert lana.feed.include?(post_self)
+    end
+    # Posts from unfollowed user
+    lana.microposts.each do |post_unfollowed|
+      assert_not tina.feed.include?(post_unfollowed)
+    end
+  end
+
 end

@@ -2,7 +2,7 @@
 
 	<%= render 'shared/micropost_form' %>
 	<ul class="microposts">
-	  <%= render @microposts %>
+	  <%= render @feed_items %>
 	</ul>
 
-<%= will_paginate %>
+<%= will_paginate @feed_items %>
