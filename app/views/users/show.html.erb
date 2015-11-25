@@ -1,6 +1,8 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
+      <%= image_tag @user.avatar.url if @user.avatar? %>
+      <%= image_tag "book.jpg", width: "100", height: "100" unless @user.avatar? %>
       <h1>
         <%= @user.name %>
       </h1>
